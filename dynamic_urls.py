@@ -10,9 +10,12 @@ def home():
 def welcome_steve():
     return "<h1>Hey steve, welcome to our webpage</h1>"
 
-@app.route("/welcome/tony")
-def welcome_tony():
-    return "<h1>Hey tony, welcome to our webpage</h1>"
+
+
+#what if we had 100 more people, so combining the code into one single format
+@app.route("/welcome/<name>")
+def welcome(name):
+    return f"<h1>Hey {name.title()}, welcome to our webpage</h1>"
 
 if __name__ == "__main__":
     app.run(debug=True)
