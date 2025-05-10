@@ -1,0 +1,19 @@
+from flask import Flask, render_template
+
+app = Flask(__name__, template_folder="templates")
+# to access html files, default is templates
+
+
+@app.route("/")
+def home():
+    return render_template("home.html")
+#invoking these hmtl files
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
