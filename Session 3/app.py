@@ -6,8 +6,9 @@ app = Flask(__name__, template_folder="templates")
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("home.html", title="Home")
 #invoking these hmtl files
+#passing page name dynamically
 
 @app.route("/about")
 def about():
