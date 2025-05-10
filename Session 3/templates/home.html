@@ -1,2 +1,14 @@
 {% extends "layout.html"%}
 <!--curly braces mean jinja code, inheriting layout.html-->
+
+{% block content %}
+<!--whatever is written here will be shown in the home page-->
+<h2>Contents:</h2>
+<ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Employees</li>
+    <li>Career</li>
+    <li>Contact Us</li>
+</ul>
+{% endblock content %}
