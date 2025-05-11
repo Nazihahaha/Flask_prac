@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+from employees import employees_data
 
 app = Flask(__name__, template_folder="templates")
 # to access html files, default is templates
@@ -17,6 +18,10 @@ def about():
 @app.route("/evaluate/<int:num>")
 def evaluate(num):
     return render_template("evaluate.html", title="Evaluate", number= num)
+
+@app.route("/employees")
+def employees():
+    return render_template("employees.html", title="Employees", employees=employees_data)
 
 
 if __name__ == "__main__":
