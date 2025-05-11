@@ -14,6 +14,9 @@ def home():
 def about():
     return render_template("about.html", title="About")
 
+@app.route("/evaluate/<int:num>")
+def evaluate(num):
+    return render_template("evaluate.html", title="Evaluate", number= num)
 
 
 if __name__ == "__main__":
