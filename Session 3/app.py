@@ -23,6 +23,10 @@ def evaluate(num):
 def employees():
     return render_template("employees.html", title="Employees", employees=employees_data)
 
+@app.route("/employees/managers")
+def managers():
+    return render_template("managers.html", title="Managers", employees=employees_data)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -14,13 +14,18 @@ employees_data = {
     3: {
         "name": "Mishu",
         "age": 45,
-        "position": "Salesperson"
+        "position": "Product Engineer"
     },
 
     4: {
         "name": "Misbah",
         "age": 25,
-        "position": "ML Emgineer"
+        "position": "ML Engineer"
     },
 
+    5: {
+        "name": "Mishkat",
+        "age": 32,
+        "position": "Manager"
+    }
 }
