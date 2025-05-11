@@ -6,7 +6,7 @@
     {% if emp_data["position"].lower() == "manager" %}
 
         <div>
-            <table>
+            <table border="8" style="width: 50%">
                 <tr>
                     <td>ID:</td>
                     <td>{{ emp_id }}</td>
@@ -32,6 +32,7 @@
         </div>
 
     {% endif %}
+    <!--always end a block-->
 
 
 {% endfor %}
