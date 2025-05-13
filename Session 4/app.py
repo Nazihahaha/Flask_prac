@@ -1,6 +1,9 @@
 from flask import (Flask, render_template, url_for)
 
+from forms import SignupForm, LoginForm
+
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "this is a secret key" #csrf token
 
 @app.route("/")
 def home():
@@ -8,11 +11,13 @@ def home():
 
 @app.route("/signup")
 def signup():
-    return render_template("signup.html", title="Sign Up")
+    form = SignupForm()
+    return render_template("signup.html", title="Sign Up", form=form)
 
 @app.route("/login")
 def login():
-    return render_template("login.html", title= "Login")
+    form = LoginForm()
+    return render_template("login.html", title= "Login", form = form)
 
 
 
