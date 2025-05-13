@@ -1,18 +1,18 @@
-from flask import Flask
+from flask import (Flask, render_template, url_for)
 
 app = FLask(__name__)
 
 @app.route("/")
 def home():
-    return
+    return render_template("home.html", title= "Home")
 
 @app.route("/signup")
 def signup():
-    return
+    return render_template("signup.html", title="Sign Up")
 
 @app.route("/login")
 def login():
-    return
+    return render_template("login.html", title= "Login")
 
 
 
