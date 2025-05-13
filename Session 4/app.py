@@ -9,7 +9,7 @@ app.config["SECRET_KEY"] = "this is a secret key" #csrf token
 def home():
     return render_template("home.html", title= "Home")
 
-@app.route("/signup")
+@app.route("/signup", methods=["GET, POST"])
 def signup():
     form = SignupForm()
     return render_template("signup.html", title="Sign Up", form=form)
@@ -18,14 +18,6 @@ def signup():
 def login():
     form = LoginForm()
     return render_template("login.html", title= "Login", form = form)
-
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
